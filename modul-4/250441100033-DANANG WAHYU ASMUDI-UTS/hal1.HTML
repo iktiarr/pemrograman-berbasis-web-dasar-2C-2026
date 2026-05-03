@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .dark-mode {
+        background-color: #0f172a !important;
+        color: #e2e8f0 !important;
+    }
+
+    .dark-mode .bg-\[\#5e7ac4\] {
+        background-color: #1e40af !important;
+    }
+
+    .dark-mode .bg-gray-100 {
+        background-color: #1e293b !important;
+    }
+
+    .dark-mode input {
+        background-color: #0f172a !important;
+        color: #e2e8f0 !important;
+        border-color: #334155 !important;
+    }
+
+    .dark-mode .text-gray-500 {
+        color: #94a3b8 !important;
+    }
+
+    .dark-mode .bg-blue-600 {
+        background-color: #4f46e5 !important;
+    }
+
+    .dark-mode .border {
+        border-color: #475569 !important;
+    }
+
+    body {
+        transition: all 0.3s ease;
+    }
+</style>
+</head>
+<body class="bg-gray-200">
+
+    <div>
+        <button id="toggleBtn" onclick="toggleDark()" 
+        class="fixed top-4 right-4 border px-3 py-1 rounded text-sm bg-white z-50 flex items-center justify-center">
+
+    <!-- ICON MATAHARI -->
+        <span id="sunIcon" class="hidden text-black">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
+                <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
+            </svg>
+        </span>
+
+    <!-- ICON BULAN -->
+        <span id="moonIcon" class="text-black dark:text-black">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
+                <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
+            </svg>
+        </span>
+
+        </button>
+    </div>
+
+  <div class="min-h-screen flex flex-col md:flex-row">
+    
+    <!-- LEFT -->
+    <div class="md:w-1/2 bg-[#5e7ac4] text-white flex flex-col justify-center items-center p-10 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">
+        Hello Prospective Students
+      </h1>
+
+      <img src="gambar_login page.png" 
+           class="w-120 mb-6" alt="illustration">
+
+      <p class="text-lg max-w-md">
+        Unlock your professional potential. Learn from industry leaders and stay ahead of the competition.
+      </p>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="md:w-1/2 flex justify-center items-center p-6">
+      <div class="bg-gray-100 p-8 rounded-xl shadow-lg w-full max-w-md">
+
+        <h2 class="text-2xl font-bold text-center mb-2">LOGIN PAGE</h2>
+        <p class="text-center text-gray-500 mb-6 text-sm">
+          Masukkan Username dan Password Anda
+        </p>
+
+        <form class="space-y-4" onsubmit="login(event)">
+            <input id="email" type="email" placeholder="Email Address"
+                class="w-full p-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-400">
+
+            <input id="password" type="password" placeholder="Password"
+                class="w-full p-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-400">
+
+            <!-- ERROR TEXT -->
+            <p id="errorMsg" class="text-red-500 text-sm hidden">
+                Error message
+            </p>
+
+            <button type="submit"
+                class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition">
+                Login
+            </button>
+        </form>
+
+        <div class="flex items-center my-4">
+          <hr class="flex-1">
+          <span class="px-2 text-gray-400 text-sm">Or Login With</span>
+          <hr class="flex-1">
+        </div>
+
+        <button
+          class="w-full flex items-center justify-center gap-2 border p-3 rounded-lg hover:bg-gray-200">
+          <img src="https://www.svgrepo.com/show/355037/google.svg" class="w-5">
+          Sign in with Account Google
+        </button>
+
+      </div>
+    </div>
+
+  </div>
+  <script>
+    function toggleDark() {
+        document.body.classList.toggle("dark-mode");
+        const isDark = document.body.classList.contains("dark-mode");
+        sunIcon.classList.toggle("hidden", !isDark);
+        moonIcon.classList.toggle("hidden", isDark);
+    }
+    
+    function login(event) {
+        event.preventDefault(); 
+
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const errorMsg = document.getElementById("errorMsg");
+
+        const validEmail = "danang@gmail.com";
+        const validPassword = "12345678";
+
+        errorMsg.classList.add("hidden");
+
+        if (password.length < 8) {
+            errorMsg.textContent = "Password minimal 8 karakter!";
+            errorMsg.classList.remove("hidden");
+            return;
+        }
+
+        if (email === validEmail && password === validPassword) {
+            alert("Anda berhasil login!");
+
+            window.location.href = "hal2.html";
+        } else {
+            errorMsg.textContent = "Email atau password salah!";
+            errorMsg.classList.remove("hidden");
+        }
+    }
+
+</script>
+</body>
+</html>
