@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css" />
+  </head>
+  <body>
+    <section>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-7 p-5 min-vh-100 text-white d-flex flex-column justify-content-center" style="background-color: #5e7ac4">
+            <h1 class="fw-bold">Hello Prospective Students</h1>
+            <p><img src="gambar_login page.png" alt="" style="width: 700px" class="img-fluid" /></p>
+            <h4 class="fw-bold">Unlock your professional potential. Learn from industry leaders and stay ahead of the competition.</h4>
+          </div>
+          <div class="col-lg-5 p-5 text-center d-flex flex-column justify-content-center">
+            <div>
+              <h3 class="fw-bold">LOGIN PAGE</h3>
+              <p class="fw-semibold text-secondary pb-3">Masukkan Username dan Password Anda</p>
+              <form class="">
+                <div class="mb-3">
+                  <input type="email" class="form-control shadow fw-semibold biru text-center" id="email" aria-describedby="emailHelp" placeholder=" Email Addres " />
+                </div>
+                <div class="mb-3">
+                  <input type="password" class="form-control shadow fw-semibold text-center d-flex justify-content-center" id="password" placeholder="Password" />
+                </div>
+
+                <button type="button" onclick="login1()" class="btn text-white w-100" style="background-color: #3852b4">Login</button>
+
+                <div class="d-flex align-items-center pt-3 pb-2 text-secondary">
+                  <div class="flex-grow-1 border-top border-secondary"></div>
+                  <span class="mx-3 text muted fw-semibold">Or Login With</span>
+                  <div class="flex-grow-1 border-top border-secondary"></div>
+                </div>
+                <button type="submit" class="border btn btn-white text-dark w-100 shadow fw-semibold"><img src="google-icon.png" alt="" width="25px" /> Sign in with Account Google</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function login1() {
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+
+        if (email == "" && password == "") {
+          alert("Email dan password tidak boleh kosong");
+        } else if (email == "") {
+          alert("Email tidak boleh kosong");
+        } else if (password == "") {
+          alert("Password tidak boleh kosong");
+        } else {
+          alert("Selamat datang tuanku");
+          window.location.href = "uts-pbwd-darkmode.html";
+        }
+      }
+    </script>
+  </body>
+</html>
