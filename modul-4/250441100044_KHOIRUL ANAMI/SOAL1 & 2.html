@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bismillah Bisa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = { darkMode: 'class' }
+  </script>
+
+</head>
+<body class="bg-white text-black dark:bg-gray-900 dark:text-white transition-colors duration-300">
+
+
+<header class="fixed flex w-full justify-between items-center px-8 py-4 bg-gray-200 dark:bg-gray-800 transition-colors ">
+  <h1 class="text-2xl font-bold text-purple-600">BzMe</h1>
+  <nav class="space-x-4 hidden md:block">
+    <a href="#Home" class="hover:text-purple-600">Home</a>
+    <a href="#About" class="hover:text-purple-600">About</a>
+    <a href="#Services" class="hover:text-purple-600">Services</a>
+    <a href="#Blog" class="hover:text-purple-600">Blog</a>
+    <a href="#Contact" class="hover:text-purple-600">Contact</a>
+    <button class="bg-orange-500 text-white px-4 py-2 rounded">Sign Up</button>
+    <button class="themeToggle bg-gray-800 text-white px-4 py-2 rounded">😎</button>
+  </nav>
+
+  <button id="menu-btn2" class="md:hidden text-2xl">
+      ☰ 
+  </button>
+
+  <div id="menu1" class="hidden fixed top-16 left-0 w-full bg-gray-200 dark:bg-gray-700 transition-colors text-center py-4 space-y-4 md:hidden">
+    <a href="#Home" class="block hover:text-purple-600">Home</a>
+    <a href="#About" class="block hover:text-purple-600">About</a>
+    <a href="#Services" class="block hover:text-purple-600">Services</a>
+    <a href="#Blog" class="block hover:text-purple-600">Blog</a>
+    <a href="#Contact" class="block hover:text-purple-600 ">Contact</a>
+    <button class="themeToggle bg-gray-800 text-white px-4 py-2 rounded">😎</button>
+    <button class="bg-orange-500 text-white px-4 py-2 rounded">Sign Up</button>
+</div>
+
+</header>
+
+<section id="Home" class="scroll-mt-32 flex flex-col md:flex-row items-center justify-between px-8 py-16 bg-yellow-200 dark:bg-gray-800 transition-colors">
+  <div class="md:w-1/2">
+    <h2 class="text-4xl font-bold mb-4">We Create Solutions For Your Business</h2>
+    <p class="mb-4">We provide intelligent technology solutions to optimize efficiency and accelerate your business growth.</p>
+    <button class="bg-orange-500 text-white px-6 py-2 rounded">Get Started</button>
+  </div>
+
+  <div>
+    <div class="py-12">
+      <img src="gambar_1-removebg-preview.png" alt="" width="400px" height="400px" >
+    </div>
+  </div>
+</section>
+
+<section id="About" class="scroll-mt-32 px-8 py-16 text-center bg-white dark:bg-gray-900 transition-colors">
+  <h2 class="text-3xl font-bold mb-4">We Provide The Best Services</h2>
+  <p class="mb-10">We deliver high-quality technology services to enhance productivity.</p>
+
+  <div class="grid md:grid-cols-4 gap-6">
+    <div class="p-6 border rounded-lg shadow bg-white dark:bg-gray-800">
+      <h3 class="font-bold mb-2">Seo/Sem</h3>
+      <p class="mb-4">Lorem ipsum dolor sit amet.</p>
+      <button class="bg-orange-500 text-white px-4 py-2 rounded">Click Here</button>
+    </div>
+
+    <div class="p-6 border rounded-lg shadow bg-white dark:bg-gray-800">
+      <h3 class="font-bold mb-2">Viral Campaign</h3>
+      <p class="mb-4">Lorem ipsum dolor sit amet.</p>
+      <button class="bg-orange-500 text-white px-4 py-2 rounded">Click Here</button>
+    </div>
+
+    <div class="p-6 border rounded-lg shadow bg-white dark:bg-gray-800">
+      <h3 class="font-bold mb-2">Marketing</h3>
+      <p class="mb-4">Lorem ipsum dolor sit amet.</p>
+      <button class="bg-orange-500 text-white px-4 py-2 rounded">Click Here</button>
+    </div>
+
+    <div class="p-6 border rounded-lg shadow bg-white dark:bg-gray-800">
+      <h3 class="font-bold mb-2">Others</h3>
+      <p class="mb-4">Lorem ipsum dolor sit amet.</p>
+      <button class="bg-orange-500 text-white px-4 py-2 rounded">Click Here</button>
+    </div>
+  </div>
+</section>
+
+<section id="Services" class="scroll-mt-32 flex flex-col md:flex-row items-center justify-between px-8 py-16 bg-gray-100 dark:bg-gray-800 transition-colors">
+  <div class="md:w-1/2 mb-6 md:mb-0">
+    <h2 class="text-3xl font-bold mb-4">Simple Solutions!</h2>
+    <p class="mb-4">We understand your goals and challenges.</p>
+    <button class="bg-orange-500 text-white px-6 py-2 rounded">Get Started</button>
+  </div>
+  <div>
+    <div class="w-full ">
+      <img src="gbr2-removebg-preview.png" alt="" width="400px" height="400px">
+    </div>
+  </div>
+</section>
+
+<section id="Blog" class="scroll-mt-32 px-8 py-16 text-center bg-white dark:bg-gray-900 transition-colors">
+  <h2 class="text-3xl font-bold mb-10">What Clients Say!</h2>
+
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="p-6 border rounded-lg shadow bg-white dark:bg-gray-800">
+      <h4 class="font-bold">Johnny Suh</h4>
+      <p class="text-sm text-gray-500 dark:text-gray-300">Executive CEO</p>
+      <p class="mt-2">Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <div class="p-6 border rounded-lg shadow bg-white dark:bg-gray-800">
+      <h4 class="font-bold">Nashley Juan</h4>
+      <p class="text-sm text-gray-500 dark:text-gray-300">Executive CEO</p>
+      <p class="mt-2">Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <div class="p-6 border rounded-lg shadow bg-white dark:bg-gray-800">
+      <h4 class="font-bold">Mark Z.</h4>
+      <p class="text-sm text-gray-500 dark:text-gray-300">Executive CEO</p>
+      <p class="mt-2">Lorem ipsum dolor sit amet.</p>
+    </div>
+  </div>
+</section>
+
+<section id="Contact" class="scroll-mt-32 px-8 py-16 bg-gray-100 dark:bg-gray-800 transition-colors">
+  <h2 class="text-3xl font-bold text-center mb-8">Contact Us</h2>
+
+  <form id="contactForm" class="max-w-xl mx-auto bg-white dark:bg-gray-900 p-6 rounded shadow space-y-4">
+    <input type="text" id="name" placeholder="Your Name" class="w-full border p-2 rounded bg-white dark:bg-gray-800">
+    <p id="nameError" class="text-red-500 text-sm"></p>
+
+    <input type="email" id="email" placeholder="Your Email" class="w-full border p-2 rounded bg-white dark:bg-gray-800">
+    <p id="emailError" class="text-red-500 text-sm"></p>
+
+    <textarea id="message" placeholder="Your Message" class="w-full border p-2 rounded bg-white dark:bg-gray-800"></textarea>
+    <p id="messageError" class="text-red-500 text-sm"></p>
+
+    <button type="submit" class="bg-orange-500 text-white px-4 py-2 rounded w-full">Send Message</button>
+  </form>
+</section>
+
+<footer class="bg-gray-800 text-white text-center py-8">
+  <p class="mb-2">Ready To Get Started? Contact Us</p>
+  <p>© 2026 BzMe</p>
+</footer>
+
+<script>
+
+const toggleBtns = document.querySelectorAll('.themeToggle');
+
+toggleBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark');
+
+    toggleBtns.forEach(b => {
+      if (document.documentElement.classList.contains('dark')) {
+        b.innerText = '😁';
+      } else {
+        b.innerText = '😎';
+      }
+    });
+  });
+});
+
+
+const form = document.getElementById('contactForm');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  let isValid = true;
+
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+
+  document.getElementById('nameError').innerText = '';
+  document.getElementById('emailError').innerText = '';
+  document.getElementById('messageError').innerText = '';
+
+  if (name === '') {
+    document.getElementById('nameError').innerText = 'Nama wajib diisi';
+    isValid = false;
+  }
+
+  if (email === '') {
+    document.getElementById('emailError').innerText = 'Email wajib diisi';
+    isValid = false;
+  } else if (!email.includes('@')) {
+    document.getElementById('emailError').innerText = 'Format email tidak valid';
+    isValid = false;
+  }
+
+  if (message === '') {
+    document.getElementById('messageError').innerText = 'Pesan wajib diisi';
+    isValid = false;
+  }
+
+  if (isValid) {
+    alert('Form berhasil dikirim!');
+    form.reset();
+  }
+});
+</script>
+
+<script>
+    const btn = document.getElementById('menu-btn2');
+    const menu = document.getElementById('menu1');
+
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+</script>
+
+</body>
+</html>
